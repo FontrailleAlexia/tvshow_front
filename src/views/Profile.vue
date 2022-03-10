@@ -1,8 +1,7 @@
 <template>
   <div class="card">
     <h1 class="card__title">Espace Perso</h1>
-    <p class="card__subtitle">Voilà donc qui je suis...</p>
-    <p>{{user.firstname}} {{user.lastname}} {{user.email}}</p>
+    <p>{{user.prenom}} {{user.nom}} {{user.email}}</p>
     <div class="form-row">
       <button @click="logout()" class="button">
         Déconnexion
@@ -38,4 +37,4 @@ export default {
 </script>
 
 <style scoped>
-</style>>
+</style>

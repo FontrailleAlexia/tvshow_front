@@ -1,29 +1,51 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
 @import "../Utils/variable";
-
 
 .container {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	min-height: 100vh;
+	/*min-height: 100vh;*/
+}
+
+h1 {
+	text-align: center;
+	font-size: 3rem;
+	padding-top: 2rem;
+}
+
+p {
+	text-align: center;
+
+	span {
+		border: solid 1px black;
+		border-radius: 2rem;
+		padding: 0.3rem;
+		cursor: pointer;
+		background: linear-gradient(to right, $color-3, $color-1);
+		font-weight: bold;
+
+		&:hover {
+			background: linear-gradient(to right, $color-1, $color-3);
+		}
+	}
 }
 
 .screen {
-	background: linear-gradient(90deg, $color-1, $color-3);		
+	background: linear-gradient(90deg, $color-1, $color-3);
 	position: relative;
 	height: 600px;
-	width: 360px;	
+	width: 360px;
 	box-shadow: 0px 0px 24px $color-1;
 }
 
 .screen__content {
 	z-index: 1;
-	position: relative;	
+	position: relative;
 	height: 100%;
 }
 
-.screen__background {		
+.screen__background {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -31,7 +53,7 @@
 	bottom: 0;
 	z-index: 0;
 	-webkit-clip-path: inset(0 0 0 0);
-	clip-path: inset(0 0 0 0);	
+	clip-path: inset(0 0 0 0);
 }
 
 .screen__background__shape {
@@ -42,18 +64,18 @@
 .screen__background__shape1 {
 	height: 520px;
 	width: 520px;
-	background: #FFF;	
+	background: #fff;
 	top: -50px;
-	right: 120px;	
+	right: 120px;
 	border-radius: 0 72px 0 0;
 }
 
 .screen__background__shape2 {
 	height: 220px;
 	width: 220px;
-	background: $color-1;	
+	background: $color-1;
 	top: -172px;
-	right: 0;	
+	right: 0;
 	border-radius: 32px;
 }
 
@@ -62,28 +84,28 @@
 	width: 190px;
 	background: linear-gradient(270deg, $color-1, $color-2);
 	top: -24px;
-	right: 0;	
+	right: 0;
 	border-radius: 32px;
 }
 
 .screen__background__shape4 {
 	height: 400px;
 	width: 200px;
-	background: $color-2;	
+	background: $color-2;
 	top: 420px;
-	right: 50px;	
+	right: 50px;
 	border-radius: 60px;
 }
 
 .login {
 	width: 320px;
 	padding: 30px;
-	padding-top: 156px;
+	/*padding-top: 156px;*/
 }
 
 .login__field {
-	padding: 20px 0px;	
-	position: relative;	
+	padding: 20px 0px;
+	position: relative;
 }
 
 .login__icon {
@@ -94,13 +116,13 @@
 
 .login__input {
 	border: none;
-	border-bottom: 2px solid #D1D1D4;
+	border-bottom: 2px solid #d1d1d4;
 	background: none;
 	padding: 10px;
 	padding-left: 24px;
 	font-weight: 700;
 	width: 75%;
-	transition: .2s;
+	transition: 0.2s;
 }
 
 .login__input:active,
@@ -116,7 +138,7 @@
 	margin-top: 30px;
 	padding: 16px 20px;
 	border-radius: 26px;
-	border: 1px solid #D4D3E8;
+	border: 1px solid #d4d3e8;
 	text-transform: uppercase;
 	font-weight: 700;
 	display: flex;
@@ -125,7 +147,7 @@
 	color: $color-3;
 	box-shadow: 0px 2px 2px $color-2;
 	cursor: pointer;
-	transition: .2s;
+	transition: 0.2s;
 }
 
 .login__submit:active,
