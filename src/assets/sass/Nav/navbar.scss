@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Redressed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap");
+
+@import "src/assets/sass/Utils/_variable.scss";
+
+.page {
+    box-sizing: border-box;
+    margin: auto;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    .menu {
+        display: flex;
+        background: linear-gradient(
+            90deg,
+            $color-1 0%,
+            $color-2 25%,
+            $color-3 75%,
+            $color-4 100%
+        );
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+        justify-content: space-between;
+
+        .menu__list {
+            display: flex;
+
+            .menu__group {
+                .menu__link {
+                    padding: var(--menuLinkPadding, 1.5rem 2.5rem);
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+
+                .text-underlined {
+                    position: relative;
+                    overflow: hidden;
+                    transition: color 0.25s ease-out;
+                }
+
+                .text-underlined::before,
+                .text-underlined::after {
+                    content: "";
+                    width: 0;
+                    height: 3px;
+                    background-color: var(--textUnderlinedLineColor, currentColor);
+
+                    will-change: width;
+                    transition: width 0.1s ease-out;
+
+                    position: absolute;
+                    bottom: 0;
+                }
+
+                .text-underlined::before {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+                .text-underlined::after {
+                    right: 50%;
+                    transform: translateX(50%);
+                }
+
+                .text-underlined:hover::before,
+                .text-underlined:hover::after {
+                    width: 100%;
+                    transition-duration: 0.2s;
+                }
+
+                .r-link {
+                    --uirLinkDisplay: var(--rLinkDisplay, inline-flex);
+
+                    display: var(--uirLinkDisplay) !important;
+                    color: var(--uirLinkTextColor) !important;
+                    text-decoration: var(--uirLinkTextDecoration) !important;
+                }
+
+                .r-link:hover {
+                    color: rgb(80, 77, 77) !important;
+                }
+            }
+        }
+    }
+}
+
+.nav__background {
+    background-image: url("../assets/img/background_navbar.webp");
+    background-size: cover;
+    filter: brightness(50%);
+}
+
+.nav__title {
+    font-family: "ZCOOL QingKe HuangYou", cursive;
+    color: white;
+    font-size: 8rem;
+    padding: 16rem;
+    padding-left: 24rem;
+    background: linear-gradient($color-1, $color-3);
+    background-clip: text;
+    color: transparent;
+}
